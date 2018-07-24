@@ -3,7 +3,7 @@
     <v-layout row class="gc-blue-background gc-white-text gc-bold">
       <v-card>
         <v-flex xs12 md12 lg12>
-          <v-card :img="slidePics[0]"></v-card>
+          <v-card-media :src="slidePics[0]"></v-card-media>
         </v-flex>
       </v-card>
       <v-flex xs5 md5 lg5 offset-xs1 offset-md1 offset-lg1>
@@ -15,12 +15,12 @@
         </v-btn>
       </v-flex>
     </v-layout>
-    <v-container>
+    <v-container class="gc-align-center">
       <v-container>
-        <v-container>
+        <v-container xs12 md12 lg12>
           <h2>About Us</h2>
         </v-container>
-        <v-layout row wrap>
+        <v-layout row wrap align-center>
           <v-flex xs12 md6 lg6>
             <v-card>
               <v-card flat>
@@ -55,7 +55,7 @@
       </v-container>
       <v-btn to="/aboutUs" outline flat class="gc-blue-border">Read More</v-btn>
     </v-container>
-    <v-container>
+    <v-container wrap class="gc-align-center">
       <v-container>
         <v-layout row wrap>
           <v-flex xs12 md3 lg3>
@@ -95,7 +95,7 @@ export default {
     return {
       title: 'Home',
       slidePics: [
-        require('../assets/pic1.jpg')
+        '../assets/images/pic1.jpg'
       ]
     }
   }

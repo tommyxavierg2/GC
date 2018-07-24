@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
     <router-view/>
   </div>
 </template>
@@ -20,4 +19,21 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+
+.gc-blue-background {
+  background-color: #23A5DC;
+}
+
+.gc-white-text {
+  color: white;
+}
+
+.gc-bold {
+  font: bold;
+}
+
+.gc-blue-border {
+  color: #23A5DC;
+}
+
 </style>

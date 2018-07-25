@@ -2,9 +2,13 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import Vuetify from 'vuetify'
+import Vuefire from 'vuefire'
+import firebase from './services/firebase'
 import 'vuetify/dist/vuetify.min.css'
 import 'material-design-icons-iconfont/dist/material-design-icons.css'
+
 Vue.use(Vuetify)
+// Vue.user(Vuefire)
 
 Vue.config.productionTip = false
 

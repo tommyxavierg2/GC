@@ -1,31 +1,36 @@
 <template>
   <div id="app">
     <v-app>
+      <v-layout align-start justify-start row wrap fill-height>
+        <v-flex xs2 sm2 md2 lg2 align-start v-for="moreInfoLine in moreInfoLines" :key="moreInfoLine.icon">
+          <v-btn flat color="blue darken-1" :href="moreInfoLine.href" target="_blank">
+            <v-icon left icon> {{moreInfoLine.icon}} </v-icon>
+            {{moreInfoLine.text}}  
+          </v-btn>
+        </v-flex>
+      </v-layout>
       <v-toolbar>
-        <v-toolbar-side-icon 
-        class="hidden-sm-and-up" 
-        @click.stop="drawer = !drawer"
-        >
-        </v-toolbar-side-icon>
-        <v-toolbar-title>Title</v-toolbar-title>
+        <v-toolbar-side-icon class="hidden-sm-and-up" @click.stop="drawer = !drawer"></v-toolbar-side-icon>
+        <v-toolbar-title>
+          <v-container ml-4>
+            <v-flex ml-4>
+              <img src="./assets/images/logo.png" alt="Logo" class="logo-principal">
+            </v-flex>
+          </v-container>
+        </v-toolbar-title>
         <v-spacer></v-spacer>
-        <v-toolbar-items class="hidden-sm-and-down mr-5">
-          <v-btn flat v-for="(item, index) in items" :key="index">{{item.name}}</v-btn>
+        <v-toolbar-items class="hidden-sm-and-down">
+          <v-btn flat v-for="(item, index) in items" :key="index" :to="item.route">{{item.name}}</v-btn>
         </v-toolbar-items>
       </v-toolbar>
-      <v-navigation-drawer
-        v-model="drawer"
-        absolute
-        temporary
-        app
-      >
+      <v-navigation-drawer v-model="drawer" absolute temporary app>
         <v-toolbar flat>
-          <v-flex class="text-xs-center">
-            Title
+          <v-flex class="mx-auto mt-4">
+            <img src="./assets/images/logo.png" alt="Logo" class="logo-principal">
           </v-flex>
         </v-toolbar>
         <v-list class="pa-1 mt-3">
-          <v-list-tile v-for="(item, index) in items" :key="index">
+          <v-list-tile v-for="(item, index) in items" :key="index" :to="item.route">
             <v-list-tile-avatar>
               <v-icon>{{ item.icon }}</v-icon>
             </v-list-tile-avatar>
@@ -38,8 +43,32 @@
       <v-content class="mt-4">
         <router-view/>
       </v-content>
-      <v-footer class="pa-3 justify-center">
-        <div>&copy; {{ new Date().getFullYear() }} - All right reserved.</div>
+      <v-footer height="auto" class="text-xs-center" color="grey lighten-6">
+        <v-layout row wrap>
+          <v-flex xs12 sm4 md4 lg4 offset-md2 mt-4 mb-4>
+            <h3>About Us</h3>
+            <p class="j-text">Global trade Industries (GTI) is company specialized in providing business solution, product management and business equipment, together with our import and export services globally</p>
+              <v-btn color="blue darken-1" icon small v-for="socialNetwork in socialNetworks" :key="socialNetwork.icon" :href="socialNetwork.href" target="_blank">
+                <img :src="socialNetwork.icon" alt="" class="responsive-img">
+              </v-btn>
+          </v-flex>
+          <v-flex xs12 sm4 md4 lg4 mt-4 mb-4>
+            <h3>Contact</h3> 
+            <v-card flat color="grey lighten-6" v-for="(moreInfoLine, index) in moreInfoLines" :key="index">
+                <v-btn :href="moreInfoLine.href" target="_blank" icon flat >
+                    <v-icon color="blue darken-1" medium icon> {{moreInfoLine.icon}} </v-icon>
+                    {{moreInfoLine.text}}  
+                </v-btn>
+            </v-card>
+          </v-flex>
+          <v-flex xs12 sm12 md12 lg12>
+            <v-card color="blue darken-1">
+              <v-card-text class="gc-white-text">
+                &copy; {{ new Date().getFullYear() }} - Copyright 2016. All right reserved. 
+              </v-card-text>
+            </v-card>
+          </v-flex>
+        </v-layout>
       </v-footer>
     </v-app>
   </div>
@@ -53,10 +82,21 @@ export default {
       drawer: false,
       items: [
         {name: 'Home', icon: 'home', route: '/'},
+        {name: 'About Us', icon: 'help_outline', route: '/aboutUs'},
         {name: 'Services', icon: 'assistant', route: '/services'},
-        {name: 'Contact Us', icon: 'phone', route: '/contact'},
-        {name: 'About Us', icon: 'help_outline', route: '/about'}
-        ]
+        {name: 'Contact Us', icon: 'phone', route: '/contactUs'}
+      ],
+      moreInfoLines: [
+        { icon: 'phone', text: '954-533-3379', href: 'tel: 954-533-3379' },
+        { icon: 'email', text: 'info@globaltradee.com', href: 'mailto:info@globaltradee.com' },
+        { icon: 'location_on', text: '5367 N Hiatus Road, Sunrise Florida 33351', href: "https://www.google.com/maps/place/North+Hiatus+Road,+Plantation,+FL,+EE.+UU./@26.1334538,-80.29958,17z/data=!3m1!4b1!4m5!3m4!1s0x88d9088b68bc8401:0x52d38f691bf513c2!8m2!3d26.133449!4d-80.2973913"}
+      ],
+      socialNetworks: [
+        { title: 'facebook', icon: require('./assets/images/fb.png'), href: '' },
+        { title: 'twitter', icon: require('./assets/images/tw.png'), href: '' },
+        { title: 'linkedin', icon: require('./assets/images/ln.jpg'), href: '' },
+        { title: 'instagram', icon: require('./assets/images/ig.png'), href: '' }
+      ]
     }
   }
 }
@@ -72,4 +112,29 @@ export default {
   flex-direction: column;
   background-color: #F5F5F5;
 }
+
+.gc-blue-background {
+  background-color: #2196f3;
+}
+
+.gc-white-text {
+  color: white;
+}
+
+.gc-bold {
+  font: bold;
+}
+
+.gc-blue-border {
+  color: #23A5DC;
+}
+
+.gc-orange-bg {
+  background-color: #E9680E;
+}
+
+.gc-align-center {
+  text-align: center;
+}
+
 </style>

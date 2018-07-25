@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Home from '@/components/Home'
 import AboutUs from '@/components/AboutUs'
 import Services from '@/components/Services'
+import ContactUs from '@/components/ContactUs'
 
 Vue.use(Router)
 
@@ -22,6 +23,11 @@ export default new Router({
       path: '/services',
       name: 'Services',
       component: Services
+    },
+    {
+      path: '/contactUs',
+      name: 'ContactUs',
+      component: ContactUs
     }
   ]
 })

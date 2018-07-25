@@ -34,7 +34,7 @@
                     <v-card flat mt-4 color="grey lighten-4">
                         <v-layout row wrap v-for="(moreInfoLine, index) in moreInfoLines" :key="index" mt-4>
                             <v-card-text>
-                                <v-btn :href="moreInfoLine.href" icon flat >
+                                <v-btn :href="moreInfoLine.href" target="_blank" icon flat >
                                     <v-icon color="blue darken-1" medium icon> {{moreInfoLine.icon}} </v-icon>
                                 </v-btn>
                                 {{moreInfoLine.text}}  
@@ -54,7 +54,7 @@
                 subTitle: 'If you have any question in how we can help your business, contact us directly by filling the following form.',
                 moreInfo: 'More Info',
                 moreInfoLines: [
-                    { icon: 'location_on', text: '5367 N Hiatus Road, Sunrise Florida 33351', href: ""},
+                    { icon: 'location_on', text: '5367 N Hiatus Road, Sunrise Florida 33351', href: "https://www.google.com/maps/place/North+Hiatus+Road,+Plantation,+FL,+EE.+UU./@26.1334538,-80.29958,17z/data=!3m1!4b1!4m5!3m4!1s0x88d9088b68bc8401:0x52d38f691bf513c2!8m2!3d26.133449!4d-80.2973913"},
                     { icon: 'phone', text: '954-533-3379', href: 'tel: 954-533-3379' },
                     { icon: 'email', text: 'info@globaltradee.com', href: 'mailto:info@globaltradee.com' }
                 ]

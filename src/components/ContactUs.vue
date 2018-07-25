@@ -22,7 +22,7 @@
                                 <v-flex xs12 sm4 md12 lg12>
                                     <v-textarea auto-grow background-color="grey lighten-3" label="Your message" solo></v-textarea>
                                 </v-flex>
-                                <v-btn color="orange darken-3" style="color: white;"> <strong> Send Message </strong> </v-btn>
+                                <v-btn color="blue darken-1" style="color: white;"> <strong> Send Message </strong> </v-btn>
                             </v-layout>
                         </v-container>
                     </v-form>
@@ -35,7 +35,7 @@
                         <v-layout row wrap v-for="(moreInfoLine, index) in moreInfoLines" :key="index" mt-4>
                             <v-card-text>
                                 <v-btn :href="moreInfoLine.href" icon flat >
-                                    <v-icon color="orange darken-3" medium icon> {{moreInfoLine.icon}} </v-icon>
+                                    <v-icon color="blue darken-1" medium icon> {{moreInfoLine.icon}} </v-icon>
                                 </v-btn>
                                 {{moreInfoLine.text}}  
                             </v-card-text>

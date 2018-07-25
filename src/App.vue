@@ -2,26 +2,23 @@
   <div id="app">
     <v-app>
       <v-toolbar>
-        <v-toolbar-side-icon 
-        class="hidden-sm-and-up" 
-        @click.stop="drawer = !drawer"
-        >
-        </v-toolbar-side-icon>
-        <v-toolbar-title>Title</v-toolbar-title>
+        <v-toolbar-side-icon class="hidden-sm-and-up" @click.stop="drawer = !drawer"></v-toolbar-side-icon>
+        <v-toolbar-title>
+          <v-container ml-4>
+            <v-flex ml-4>
+              <img src="./assets/images/logo.png" alt="Logo" class="logo-principal">
+            </v-flex>
+          </v-container>
+        </v-toolbar-title>
         <v-spacer></v-spacer>
-        <v-toolbar-items class="hidden-sm-and-down mr-5">
+        <v-toolbar-items class="hidden-sm-and-down">
           <v-btn flat v-for="(item, index) in items" :key="index" :to="item.route">{{item.name}}</v-btn>
         </v-toolbar-items>
       </v-toolbar>
-      <v-navigation-drawer
-        v-model="drawer"
-        absolute
-        temporary
-        app
-      >
+      <v-navigation-drawer v-model="drawer" absolute temporary app>
         <v-toolbar flat>
-          <v-flex class="text-xs-center">
-            Title
+          <v-flex class="mx-auto mt-4">
+            <img src="./assets/images/logo.png" alt="Logo" class="logo-principal">
           </v-flex>
         </v-toolbar>
         <v-list class="pa-1 mt-3">
@@ -39,7 +36,7 @@
         <router-view/>
       </v-content>
       <v-footer class="pa-3 justify-center">
-        <div>&copy; {{ new Date().getFullYear() }} - All right reserved.</div>
+        <div>&copy; {{ new Date().getFullYear() }} - Copyright 2016. All right reserved. </div>
       </v-footer>
     </v-app>
   </div>
@@ -74,7 +71,7 @@ export default {
 }
 
 .gc-blue-background {
-  background-color: #23A5DC;
+  background-color: #2196f3;
 }
 
 .gc-white-text {

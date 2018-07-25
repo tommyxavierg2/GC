@@ -55,7 +55,7 @@ export default {
         {name: 'Home', icon: 'home', route: '/'},
         {name: 'About Us', icon: 'help_outline', route: '/aboutUs'},
         {name: 'Services', icon: 'assistant', route: '/services'},
-        {name: 'Contact Us', icon: 'phone', route: '/contact'}
+        {name: 'Contact Us', icon: 'phone', route: '/contactUs'}
         ]
     }
   }
@@ -87,6 +87,10 @@ export default {
 
 .gc-blue-border {
   color: #23A5DC;
+}
+
+.gc-orange-bg {
+  background-color: #E9680E;
 }
 
 .gc-align-center {

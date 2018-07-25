@@ -1,6 +1,6 @@
 <template>
     <div class="text-xs-center">
-        <h1>{{title}}</h1>
+        <h1 class="mt-4">{{title}}</h1>
         <v-container>
             <v-layout row wrap pb-4>
                 <v-flex xs12 sm7 md7 lg7>

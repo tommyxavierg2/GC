@@ -32,11 +32,11 @@
           </v-list-tile>
         </v-list>
       </v-navigation-drawer>
-      <v-content class="mt-4">
+      <v-content>
         <router-view/>
       </v-content>
-      <v-footer class="pa-3 justify-center">
-        <div>&copy; {{ new Date().getFullYear() }} - Copyright 2016. All right reserved. </div>
+      <v-footer class="pa-3 justify-center white">
+        <div>Copyright &copy; {{ new Date().getFullYear() }} - All right reserved. </div>
       </v-footer>
     </v-app>
   </div>

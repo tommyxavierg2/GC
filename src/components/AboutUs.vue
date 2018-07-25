@@ -1,6 +1,6 @@
 <template>
     <div class="text-xs-center">
-        <h1>{{title}}</h1>
+        <h1 class="mt-4">{{title}}</h1>
         <v-container>
             <v-layout row wrap pt-4 pb-4>
                 <v-flex xs12 sm6 md6 lg6>
@@ -21,7 +21,7 @@
                         <v-card-media :src="pic.image" height="200px"></v-card-media>
                     </v-card>
                     <v-card-title>
-                        <h3>{{pic.title}}</h3>
+                        <h3 class="mx-auto">{{pic.title}}</h3>
                         <p class="j-text">{{pic.message}}</p>
                     </v-card-title>
                 </v-flex>

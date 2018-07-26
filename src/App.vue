@@ -9,7 +9,7 @@
           </v-btn>
         </v-toolbar-items>
       </v-toolbar>
-      <v-toolbar>
+      <v-toolbar class="hidden-sm-and-down">
         <v-toolbar-side-icon class="hidden-sm-and-up" @click.stop="drawer = !drawer"></v-toolbar-side-icon>
         <v-toolbar-title>
           <v-flex >
@@ -17,11 +17,9 @@
           </v-flex>
         </v-toolbar-title>
         <v-spacer></v-spacer>
-        <v-tabs-items v-model="active" slider-color="yellow" class="hidden-sm-and-down">
           <v-btn flat v-for="(item, index) in items" :key="index" :to="item.route" @click="active = index">
             {{item.name}}
           </v-btn>
-        </v-tabs-items>
       </v-toolbar>
       <v-navigation-drawer v-model="drawer" absolute temporary app>
         <v-toolbar flat>
@@ -47,22 +45,22 @@
           <v-card flat tile class="grey darken-3 white--text text-xs-center">
           <v-card-text>
             <v-layout row wrap>
-              <v-flex xs12 sm12 md6 lg6 xl6>
-                <h3>About Us</h3>
+              <v-flex xs12 sm12 md5 lg5 xl5 offset-xs1>
+                <h3>{{this.$t("message.about")}}</h3>
                 <p>
-                  Global trade Industries (GTI) is company specialized in providing business solution, product management and business equipment, together with our import and export services globally
+                  {{this.$t("message.aboutDescription")}}
                 </p>
                 <v-btn v-for="socialNetwork in socialNetworks" :key="socialNetwork.icon" :href="socialNetwork.href" target="_blank" 
                   class="mx-3 white--text" icon>
                   <v-icon size="24px">{{ socialNetwork.icon }}</v-icon>
                 </v-btn>
               </v-flex>
-              <v-flex xs12 sm12 md6 lg6 xl6>
-                <h3>Contact</h3>
+              <v-flex xs12 sm12 md5 lg5 xl5>
+                <h3>{{this.$t("message.contacts")}}</h3>
                 <v-layout row wrap>
                   <v-flex class="text-xs-left" xs12 sm12 md9 lg9 xl9 offset-md3 offset-lg3 offset-xl3 v-for="(moreInfoLine, index) in moreInfoLines" :key="index">
                     <v-btn flat small :href="moreInfoLine.href" target="_blank">
-                      <v-icon left>{{moreInfoLine.icon}}</v-icon>
+                      <v-icon small left>{{moreInfoLine.icon}}</v-icon>
                       {{moreInfoLine.text}}
                     </v-btn>
                   </v-flex>
@@ -71,7 +69,7 @@
             </v-layout>
           </v-card-text>
           <v-card-text class="blue darken-1 white--text">
-            Copyright &copy; {{ new Date().getFullYear() }} — All right reserved.
+            Copyright &copy; {{ new Date().getFullYear() }} — {{this.$t("message.rightReserved")}}.
           </v-card-text>
         </v-card>
       </v-footer>
@@ -87,10 +85,10 @@ export default {
       drawer: false,
       active: null,
       items: [
-        {name: 'Home', icon: 'home', route: '/'},
-        {name: 'About Us', icon: 'help_outline', route: '/aboutUs'},
-        {name: 'Services', icon: 'assistant', route: '/services'},
-        {name: 'Contact Us', icon: 'phone', route: '/contactUs'}
+        {name: this.$t("message.home"), icon: 'home', route: '/'},
+        {name: this.$t("message.about"), icon: 'help_outline', route: '/aboutUs'},
+        {name: this.$t("message.services"), icon: 'assistant', route: '/services'},
+        {name: this.$t("message.contactUs"), icon: 'phone', route: '/contactUs'}
       ],
       moreInfoLines: [
         { icon: 'phone', text: '954-533-3379', href: 'tel: 954-533-3379' },

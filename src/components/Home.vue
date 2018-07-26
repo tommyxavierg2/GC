@@ -3,7 +3,7 @@
     <v-layout row wrap class="gc-blue-background gc-white-text gc-bold">
       <v-flex xs12 md12 lg12>
         <v-card flat>
-          <v-card-media :src="slidePic" :height="windowsSize.x > 776 ? '600px' : '200px' ">
+          <v-card-media :src="slidePic" :height="windowsSize.x > 776 ? '800px' : '200px' ">
             <v-btn flat left round absolute small @click="nextPrevImage(slidePics)" style="top: 50%;">
               <v-icon color="white">keyboard_arrow_left</v-icon>
             </v-btn>
@@ -24,65 +24,55 @@
     </v-layout>
     <v-container>
       <v-container>
-        <v-container xs12 sm12 md12 lg12>
+        <v-container>
           <h2>About Us</h2>
         </v-container>
         <v-layout row wrap>
-          <v-flex xs12 sm5 md5 lg5 offset-xs1 offset-md1 offset-lg1 mb-4>
-            <v-card>
-              <v-card flat>
-                <v-card-media :src="slidePics[3]" height="200px" width="300px"></v-card-media>
-              </v-card>
+          <v-flex xs12 sm5 md5 lg5 offset-xs1 offset-md1 offset-lg1>
+            <v-card flat>
+              <v-card-media :src="slidePics[3]" height="200px" width="300px"></v-card-media>
             </v-card>
           </v-flex>
           <v-flex xs12 sm5 md5 lg5 offset-xs1 offset-md1 offset-lg1>
-            <p class="j-text">We are a company specialized in providing business solution, product management and business equipment, together with our import and export services globally.</p>
+            We are a company specialized in providing business solution, product management and business equipment, together with our import and export services globally.
           </v-flex>
         </v-layout>
       </v-container>
+      <h2>Our History</h2>
       <v-container>
-        <v-container>
-          <h2>Our History</h2>
-        </v-container>
-        <v-layout row wrap>
-          <v-flex xs12 sm12 md12 lg12>
-            <p>Global Trade Industries (GTI) is a company created in November 2015.</p>
-            <p>We have just opened our new warehouse in Miami, FL on October 2016.</p>
-          </v-flex>
-        </v-layout>
+        <p>Global Trade Industries (GTI) is a company created in November 2015.</p>
+        <p>We have just opened our new warehouse in Miami, FL on March  2016.</p>
       </v-container>
       <v-btn to="/aboutUs" outline flat class="gc-blue-border">Read More</v-btn>
     </v-container>
-    <v-container wrap>
-      <v-container>
-        <v-layout row wrap>
-          <v-flex xs12 sm3 md3 lg3>
-            <v-icon large color="blue darken-1">people</v-icon>
-            <v-container>
-              <p class="j-text"> <strong> Management of products and equipment at an international level </strong> </p>
-            </v-container>
-          </v-flex>
-          <v-flex xs12 sm3 md3 lg3>
-            <v-icon large color="blue darken-1">send</v-icon>
-            <v-container>
-              <p class="j-text"> <strong> Import and export services </strong> </p>
-            </v-container>
-          </v-flex>
-          <v-flex xs12 sm3 md3 lg3>
-            <v-icon large color="blue darken-1">location_city</v-icon>
-            <v-container>
-              <p class="j-text"> <strong> 3PL Services </strong> </p>
-            </v-container>
-          </v-flex>
-          <v-flex xs12 sm3 md3 lg3>
-            <v-icon large color="blue darken-1">public</v-icon>
-            <v-container>
-              <p class="j-text"> <strong> Merchandise consolidation </strong> </p>
-            </v-container>
-          </v-flex>
-        </v-layout>
-        <v-btn to="/services" outline flat class="gc-blue-border">Read More</v-btn>
-      </v-container>
+    <v-container>
+      <v-layout row wrap>
+        <v-flex xs12 sm3 md3 lg3>
+          <v-icon large color="blue darken-1">people</v-icon>
+          <v-container>
+            <p class="j-text"> <strong> Management of products and equipment at an international level </strong> </p>
+          </v-container>
+        </v-flex>
+        <v-flex xs12 sm3 md3 lg3>
+          <v-icon large color="blue darken-1">send</v-icon>
+          <v-container>
+            <p class="j-text"> <strong> Import and export services </strong> </p>
+          </v-container>
+        </v-flex>
+        <v-flex xs12 sm3 md3 lg3>
+          <v-icon large color="blue darken-1">location_city</v-icon>
+          <v-container>
+            <p class="j-text"> <strong> 3PL Services </strong> </p>
+          </v-container>
+        </v-flex>
+        <v-flex xs12 sm3 md3 lg3>
+          <v-icon large color="blue darken-1">public</v-icon>
+          <v-container>
+            <p class="j-text"> <strong> Merchandise consolidation </strong> </p>
+          </v-container>
+        </v-flex>
+      </v-layout>
+      <v-btn to="/services" outline flat class="gc-blue-border">Read More</v-btn>
     </v-container>
   </div>
 </template>

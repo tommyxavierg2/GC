@@ -55,9 +55,9 @@
           <v-card-text>
             <v-layout row wrap>
               <v-flex xs12 sm12 md6 lg6 xl6>
-                <h3>About Us</h3>
+                <h3>{{this.$t("message.about")}}</h3>
                 <p>
-                  Global trade Industries (GTI) is company specialized in providing business solution, product management and business equipment, together with our import and export services globally
+                  {{this.$t("message.aboutDescription")}}
                 </p>
                 <v-btn
               v-for="socialNetwork in socialNetworks"
@@ -71,7 +71,7 @@
             </v-btn>
               </v-flex>
               <v-flex xs12 sm12 md6 lg6 xl6>
-                <h3>Contact</h3>
+                <h3>{{this.$t("message.contacts")}}</h3>
                 <v-layout row wrap>
                   <v-flex class="text-xs-left" xs12 sm12 md9 lg9 xl9 offset-md3 offset-lg3 offset-xl3 v-for="(moreInfoLine, index) in moreInfoLines" :key="index">
                     <v-btn flat :href="moreInfoLine.href" target="_blank">
@@ -84,7 +84,7 @@
             </v-layout>
           </v-card-text>
           <v-card-text class="blue darken-1 white--text">
-            Copyright &copy; {{ new Date().getFullYear() }} — All right reserved.
+            Copyright &copy; {{ new Date().getFullYear() }} — {{this.$t("message.rightReserved")}}.
           </v-card-text>
         </v-card>
       </v-footer>
@@ -105,15 +105,15 @@ export default {
       ],
       drawer: false,
       items: [
-        {name: 'Home', icon: 'home', route: '/'},
-        {name: 'About Us', icon: 'help_outline', route: '/aboutUs'},
-        {name: 'Services', icon: 'assistant', route: '/services'},
-        {name: 'Contact Us', icon: 'phone', route: '/contactUs'}
+        {name: this.$t("message.home"), icon: 'home', route: '/'},
+        {name: this.$t("message.about"), icon: 'help_outline', route: '/aboutUs'},
+        {name: this.$t("message.services"), icon: 'assistant', route: '/services'},
+        {name: this.$t("message.contactUs"), icon: 'phone', route: '/contactUs'}
       ],
       moreInfoLines: [
         { icon: 'phone', text: '954-533-3379', href: 'tel: 954-533-3379' },
         { icon: 'email', text: 'info@globaltradee.com', href: 'mailto:info@globaltradee.com' },
-        { icon: 'location_on', text: 'N Hiatus Road, Sunrise Florida 33351', href: "https://www.google.com/maps/place/North+Hiatus+Road,+Plantation,+FL,+EE.+UU./@26.1334538,-80.29958,17z/data=!3m1!4b1!4m5!3m4!1s0x88d9088b68bc8401:0x52d38f691bf513c2!8m2!3d26.133449!4d-80.2973913"}
+        { icon: 'location_on', text: 'Hiatus Road, Sunrise Florida 5367 N', href: "https://www.google.com/maps/place/North+Hiatus+Road,+Plantation,+FL,+EE.+UU./@26.1334538,-80.29958,17z/data=!3m1!4b1!4m5!3m4!1s0x88d9088b68bc8401:0x52d38f691bf513c2!8m2!3d26.133449!4d-80.2973913"}
       ],
       socialNetworks: [
         { title: 'facebook', icon: 'fab fa-facebook', href: '' },

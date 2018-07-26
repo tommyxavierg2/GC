@@ -1,0 +1,15 @@
+{
+    "message": {
+        "langs": [
+            {"name": "English", "code": "EN"},
+            {"name": "Spanish", "code": "ES"}
+        ],
+        "about": "About Us",
+        "aboutDescription": "Global trade Industries (GTI) is company specialized in providing business solution, product management and business equipment, together with our import and export services globally",
+        "contacts": "Contacts",
+        "rightReserved": "All right reserved",
+        "home": "Home",
+        "services": "Services",
+        "contactUs": "Contact Us"
+    }
+}

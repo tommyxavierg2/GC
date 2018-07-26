@@ -4,7 +4,7 @@
         <v-container>
             <v-layout row wrap pt-4 pb-4>
                 <v-flex xs12 sm6 md6 lg6>
-                    <h3>Who are we?</h3>
+                    <h3></h3>
                     <v-container>
                         <p class="j-text"> {{whoWe.message}} </p>
                     </v-container>
@@ -33,12 +33,12 @@
 export default {
   data () {
     return {
-        title: 'About Us',
-        whoWe: { title: 'Who we are?', image: require('../assets/images/pic5.jpeg'), message: ' We are a company specialized in providing business solution, product management and business equipment, together with our import and export services globally.'},
+        title: this.$t("message.about"),
+        whoWe: { title: this.$t("message.waw"), image: require('../assets/images/pic5.jpeg'), message: this.$t("message.aboutDescription")},
         pics: [
-            { title: 'Mission', image: require('../assets/images/pic6.jpg'), message: 'Our mission is to offer the best services for business solution to companies when it comes to product management import & export services, by optimizing and lowering costs of our clients when managing a product in the international markets.'},
-            { title: 'Vision', image: require('../assets/images/pic7.jpg'), message: 'Our vision is to be the best service provider in offering management of products and services for international import & export, always offering a competitive advantage to our customers'},
-            { title: 'History', image: require('../assets/images/pic8.jpg'), message: 'Global Trade Industries (GTI) is a company created in November 2015. We have just opened our new warehouse in Miami, FL on October 2016.'}
+            { title: this.$t("message.mission"), image: require('../assets/images/pic6.jpg'), message: this.$t("message.ourMission")},
+            { title: this.$t("message.vision"), image: require('../assets/images/pic7.jpg'), message: this.$t("message.ourVision")},
+            { title: this.$t("message.history"), image: require('../assets/images/pic8.jpg'), message: `${this.$t("message.globalCreated")} ${this.$t("message.openedWarehouse")}`}
         ]
     }
   }

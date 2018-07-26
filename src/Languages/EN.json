@@ -33,6 +33,26 @@
         "yourMessage": "Your Message",
         "sendMessage": "Send Message",
         "subContact": "If you have any question in how we can help your business, contact us directly by filling the following form.",
-        "moreInfo": "More Info"
+        "moreInfo": "More Info",
+        "beNumberOne": "To be the number one intermediary agent in managing products and equipment requested by customers with manufacturers and / or distributors on an international level, offering a better option when it comes to competitive prices of the products requested.",
+        "tradeLogistic": "Trade and logistic services",
+        "ourServices": "Our Services",
+        "tradeAndServices": [
+            "Perform the coordination of logistics in the mobilization of goods in the import and export according to the needs of the customer.",
+            "Preparation of all necessary information for export documents",
+            "Export Quotes",
+            "Air shipments (Direct and consolidated)",
+            "Maritime Shipping (By container or LCL)",
+            "Door to door transportation services.",
+            "Pick-up and delivery services",
+            "Shipment tracking report",
+            "Contracting of cargo",
+            "Negotiation of shipment prices"
+        ],
+        "services3p": [
+            "Outsourced logistics services to client companies for part or all of their supply chain management functions.",
+            "Consolidation of merchandise",
+            "Fulfillment"
+        ]
     }
 }

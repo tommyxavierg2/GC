@@ -42,7 +42,7 @@
       </v-container>
       <v-container>
         <v-container>
-          <h2>{{this.$t("ourHistory")}}</h2>
+          <h2>{{this.$t("message.ourHistory")}}</h2>
         </v-container>
         <v-layout row wrap>
           <v-flex xs12 sm12 md12 lg12>

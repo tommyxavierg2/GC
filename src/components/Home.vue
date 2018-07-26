@@ -14,10 +14,10 @@
         </v-card>
       </v-flex>
       <v-flex xs12 md5 lg5 offset-xs1 offset-md1 offset-lg1>
-        <h2>Ready to work with us?</h2>
+        <h2>{{this.$t("message.readyWork")}}</h2>
       </v-flex>
       <v-flex xs12 md5 lg5 offset-xs1 offset-md1 offset-lg1>
-        <v-btn flat to="/contactUS" color="white"> <strong>Contact Us</strong>
+        <v-btn flat to="/contactUS" color="white"> <strong>{{this.$t("message.contactUs")}}</strong>
           <v-icon>keyboard_arrow_right</v-icon>
         </v-btn>
       </v-flex>
@@ -25,7 +25,7 @@
     <v-container>
       <v-container>
         <v-container xs12 sm12 md12 lg12>
-          <h2>About Us</h2>
+          <h2>{{this.$t("message.about")}}</h2>
         </v-container>
         <v-layout row wrap>
           <v-flex xs12 sm5 md5 lg5 offset-xs1 offset-md1 offset-lg1 mb-4>
@@ -36,22 +36,22 @@
             </v-card>
           </v-flex>
           <v-flex xs12 sm5 md5 lg5 offset-xs1 offset-md1 offset-lg1>
-            <p class="j-text">We are a company specialized in providing business solution, product management and business equipment, together with our import and export services globally.</p>
+            <p class="j-text">{{this.$t("message.weAre")}}</p>
           </v-flex>
         </v-layout>
       </v-container>
       <v-container>
         <v-container>
-          <h2>Our History</h2>
+          <h2>{{this.$t("ourHistory")}}</h2>
         </v-container>
         <v-layout row wrap>
           <v-flex xs12 sm12 md12 lg12>
-            <p>Global Trade Industries (GTI) is a company created in November 2015.</p>
-            <p>We have just opened our new warehouse in Miami, FL on October 2016.</p>
+            <p>{{this.$t("message.globalCreated")}}</p>
+            <p>{{this.$t("message.openedWarehouse")}}</p>
           </v-flex>
         </v-layout>
       </v-container>
-      <v-btn to="/aboutUs" outline flat class="gc-blue-border">Read More</v-btn>
+      <v-btn to="/aboutUs" outline flat class="gc-blue-border">{{this.$t("message.readMore")}}</v-btn>
     </v-container>
     <v-container wrap>
       <v-container>
@@ -59,29 +59,29 @@
           <v-flex xs12 sm3 md3 lg3>
             <v-icon large color="blue darken-1">people</v-icon>
             <v-container>
-              <p class="j-text"> <strong> Management of products and equipment at an international level </strong> </p>
+              <p class="j-text"> <strong> {{this.$t("message.managementLevel")}} </strong> </p>
             </v-container>
           </v-flex>
           <v-flex xs12 sm3 md3 lg3>
             <v-icon large color="blue darken-1">send</v-icon>
             <v-container>
-              <p class="j-text"> <strong> Import and export services </strong> </p>
+              <p class="j-text"> <strong> {{this.$t("message.imEx")}} </strong> </p>
             </v-container>
           </v-flex>
           <v-flex xs12 sm3 md3 lg3>
             <v-icon large color="blue darken-1">location_city</v-icon>
             <v-container>
-              <p class="j-text"> <strong> 3PL Services </strong> </p>
+              <p class="j-text"> <strong> {{this.$t("message.3PLservices")}} </strong> </p>
             </v-container>
           </v-flex>
           <v-flex xs12 sm3 md3 lg3>
             <v-icon large color="blue darken-1">public</v-icon>
             <v-container>
-              <p class="j-text"> <strong> Merchandise consolidation </strong> </p>
+              <p class="j-text"> <strong> {{this.$t("message.mercConsolidation")}} </strong> </p>
             </v-container>
           </v-flex>
         </v-layout>
-        <v-btn to="/services" outline flat class="gc-blue-border">Read More</v-btn>
+        <v-btn to="/services" outline flat class="gc-blue-border">{{this.$t("message.readMore")}}</v-btn>
       </v-container>
     </v-container>
   </div>

@@ -1,5 +1,6 @@
 {
     "message": {
+        "lang": "EN",
         "langs": [
             {"name": "English", "code": "EN"},
             {"name": "Spanish", "code": "ES"}

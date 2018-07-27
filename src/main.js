@@ -5,6 +5,7 @@ import Vuetify from 'vuetify'
 import VueI18n from 'vue-i18n'
 import Vuefire from 'vuefire'
 import firebase from './services/firebase'
+import store from './store/store'
 import 'vuetify/dist/vuetify.min.css'
 import 'material-design-icons-iconfont/dist/material-design-icons.css'
 
@@ -31,9 +32,10 @@ const i18n = new VueI18n({
 
 
 /* eslint-disable no-new */
-new Vue({
+export const app = new Vue({
   el: '#app',
   router,
+  store,
   i18n,
   components: { App },
   template: '<App/>'

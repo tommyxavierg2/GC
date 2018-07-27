@@ -9,25 +9,22 @@
           </v-btn>
         </v-toolbar-items>
         <v-spacer></v-spacer>
-        <v-btn-toggle class="blue darken-1">
-          <v-btn flat>EN</v-btn>
-          <v-btn flat>ES</v-btn>
-        </v-btn-toggle>
+        <v-btn flat icon v-for="(k, index) in $t('message.langs')" :key="index" @click="$store.commit('setLanguage', k.code.toLowerCase())">{{k.code}}</v-btn>
       </v-toolbar>
-      <v-toolbar class="hidden-sm-and-down">
+      <v-toolbar>
         <v-toolbar-side-icon class="hidden-sm-and-up" @click.stop="drawer = !drawer"></v-toolbar-side-icon>
         <v-toolbar-title>
-          <v-flex >
+          <v-flex>
             <img src="./assets/images/logo.png" alt="Logo" class="logo-principal" width="200px">
           </v-flex>
         </v-toolbar-title>
         <v-spacer></v-spacer>
-          <v-btn flat v-for="(item, index) in items" :key="index" :to="item.route" @click="active = index">
+          <v-btn class="hidden-sm-and-down" flat v-for="(item, index) in items" :key="index" :to="item.route" @click="active = index">
             {{item.name}}
           </v-btn>
       </v-toolbar>
       <v-navigation-drawer v-model="drawer" absolute temporary app>
-        <v-toolbar flat>
+        <v-toolbar flat class="py-2">
           <v-flex mx-auto mt-4 class="text-xs-center">
             <img src="./assets/images/logo.png" alt="Logo" class="logo-principal" width="200px">
           </v-flex>
@@ -42,6 +39,12 @@
             </v-list-tile-content>
           </v-list-tile>
         </v-list>
+        <v-footer>
+          <v-flex class="text-xs-center">
+            <v-btn flat icon>EN</v-btn>
+            <v-btn flat icon>ES</v-btn>
+          </v-flex>
+        </v-footer>
       </v-navigation-drawer>
       <v-content>
         <router-view/>
@@ -107,6 +110,10 @@ export default {
         { title: 'instagram', icon: 'fab fa-instagram', href: '' }
       ]
     }
+  },
+  created() {
+    let saveLanguage = localStorage.getItem('data');
+    saveLanguage === 'en' ? localStorage.setItem('data', 'en') : localStorage.setItem('data', 'es');
   }
 }
 </script>

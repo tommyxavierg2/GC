@@ -5,7 +5,7 @@
             <v-layout row wrap pb-4>
                 <v-flex xs12 sm7 md7 lg7>
                     <p class="text-sm-left"> 
-                        <strong> {{`${this.$t("message.managementLevel")}:`}} </strong> {{this.$t("message.beNumberOne")}}
+                        <strong> {{`${$t("message.managementLevel")}:`}} </strong> {{$t("message.beNumberOne")}}
                     </p>
                 </v-flex>
                 <v-flex xs12 sm4 md4 lg4 offset-xs1>
@@ -14,7 +14,7 @@
                     </v-card>
                 </v-flex>
             </v-layout>
-            <h4 class="text-sm-left">{{this.$t("message.tradeLogistic")}}</h4>
+            <h4 class="text-sm-left">{{$t("message.tradeLogistic")}}</h4>
             <v-layout row wrap pb-4>
                 <v-flex xs12 sm7 md7 lg7 pt-4>
                     <ul class="text-sm-left">
@@ -31,7 +31,7 @@
                     </v-layout>
                 </v-flex>
             </v-layout>
-            <h4 class="text-sm-left">{{this.$t("message.3PLservices")}} (Third-party Logistics):</h4>
+            <h4 class="text-sm-left">{{$t("message.3PLservices")}} (Third-party Logistics):</h4>
             <v-layout row wrap pb-4>
                 <v-flex xs12 sm7 md7 lg7 pt-1>
                     <ul class="text-sm-left">

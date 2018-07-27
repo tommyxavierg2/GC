@@ -22,7 +22,7 @@
                                 <v-flex xs12 sm4 md12 lg12>
                                     <v-textarea auto-grow background-color="grey lighten-3" :label="$t('message.yourMessage')" solo></v-textarea>
                                 </v-flex>
-                                <v-btn color="blue darken-1" style="color: white;"> <strong> {{this.$t("message.sendMessage")}} </strong> </v-btn>
+                                <v-btn color="blue darken-1" style="color: white;"> <strong> {{$t("message.sendMessage")}} </strong> </v-btn>
                             </v-layout>
                         </v-container>
                     </v-form>

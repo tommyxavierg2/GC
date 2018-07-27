@@ -5,7 +5,7 @@
             <v-layout row wrap pb-4>
                 <v-flex xs12 sm7 md7 lg7>
                     <p class="text-sm-left"> 
-                        <strong> {{`${$t("message.managementLevel")}:`}} </strong> {{$t("message.beNumberOne")}}
+                        <strong> {{$t("message.managementLevel")}}: </strong> {{$t("message.beNumberOne")}}
                     </p>
                 </v-flex>
                 <v-flex xs12 sm4 md4 lg4 offset-xs1>

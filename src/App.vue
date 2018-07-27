@@ -54,9 +54,9 @@
           <v-card-text>
             <v-layout row wrap>
               <v-flex xs12 sm12 md5 lg5 xl5 offset-xs1>
-                <h3>{{this.$t("message.about")}}</h3>
+                <h3>{{$t("message.about")}}</h3>
                 <p>
-                  {{this.$t("message.aboutDescription")}}
+                  {{$t("message.aboutDescription")}}
                 </p>
                 <v-btn v-for="socialNetwork in socialNetworks" :key="socialNetwork.icon" :href="socialNetwork.href" target="_blank" 
                   class="mx-3 white--text" icon>
@@ -64,7 +64,7 @@
                 </v-btn>
               </v-flex>
               <v-flex xs12 sm12 md5 lg5 xl5>
-                <h3>{{this.$t("message.contacts")}}</h3>
+                <h3>{{$t("message.contacts")}}</h3>
                 <v-layout row wrap>
                   <v-flex class="text-xs-left" xs12 sm12 md9 lg9 xl9 offset-md3 offset-lg3 offset-xl3 v-for="(moreInfoLine, index) in moreInfoLines" :key="index">
                     <v-btn flat small :href="moreInfoLine.href" target="_blank">
@@ -77,7 +77,7 @@
             </v-layout>
           </v-card-text>
           <v-card-text class="blue darken-1 white--text">
-            Copyright &copy; {{ new Date().getFullYear() }} — {{this.$t("message.rightReserved")}}.
+            Copyright &copy; {{ new Date().getFullYear() }} — {{$t("message.rightReserved")}}.
           </v-card-text>
         </v-card>
       </v-footer>
@@ -109,6 +109,11 @@ export default {
         { title: 'linkedin', icon: 'fab fa-linkedin', href: '' },
         { title: 'instagram', icon: 'fab fa-instagram', href: '' }
       ]
+    }
+  },
+  watch: {
+    'this.$store.state.lang'(newVal, oldVal) {
+      this.$store.commit('setLanguage', newVal);
     }
   },
   created() {

@@ -11,9 +11,7 @@ export default new Vuex.Store({
         setLanguage(state, language) {
             app.$i18n.locale = language;
             state.lang = language;
-            let x = language;
-            localStorage.setItem('data', x);
-            console.log(language);
+            localStorage.setItem('data', language);
         }
     },
     actions: {

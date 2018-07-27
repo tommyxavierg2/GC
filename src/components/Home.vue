@@ -24,10 +24,8 @@
     </v-layout>
     <v-container>
       <v-container>
-        <v-container xs12 sm12 md12 lg12>
-          <h2>{{this.$t("message.about")}}</h2>
-        </v-container>
-        <v-layout row wrap>
+        <h2>{{this.$t("message.about")}}</h2>
+        <v-layout row wrap pt-3>
           <v-flex xs12 sm5 md5 lg5 offset-xs1 offset-md1 offset-lg1>
             <v-card flat>
               <v-card-media :src="slidePics[3]" height="200px" width="300px"></v-card-media>
@@ -38,12 +36,9 @@
           </v-flex>
         </v-layout>
       </v-container>
-      <h2>Our History</h2>
       <v-container>
-        <v-container>
-          <h2>{{this.$t("message.ourHistory")}}</h2>
-        </v-container>
-        <v-layout row wrap>
+        <h2>{{this.$t("message.ourHistory")}}</h2>
+        <v-layout row wrap pt-3>
           <v-flex xs12 sm12 md12 lg12>
             <p>{{this.$t("message.globalCreated")}}</p>
             <p>{{this.$t("message.openedWarehouse")}}</p>

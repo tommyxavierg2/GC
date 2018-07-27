@@ -1,6 +1,6 @@
 <template>
     <div class="text-xs-center">
-        <h1 class="mt-4">{{title}}</h1>
+        <h1 class="mt-4">{{$t("message.ourServices")}}</h1>
         <v-container>
             <v-layout row wrap pb-4>
                 <v-flex xs12 sm7 md7 lg7>
@@ -18,7 +18,7 @@
             <v-layout row wrap pb-4>
                 <v-flex xs12 sm7 md7 lg7 pt-4>
                     <ul class="text-sm-left">
-                        <li v-for="(service, index) in tradeAndServices" :key="index" class="text-sm-left"> {{service}} </li>
+                        <li v-for="(service, index) in $t('message.tradeAndServices')" :key="index" class="text-sm-left"> {{service}} </li>
                     </ul>
                 </v-flex>
                 <v-flex xs12 sm7 md4 lg4 pt-1 offset-xs1>
@@ -35,7 +35,7 @@
             <v-layout row wrap pb-4>
                 <v-flex xs12 sm7 md7 lg7 pt-1>
                     <ul class="text-sm-left">
-                        <li v-for="(service, index) in services3p" :key="index"> {{service}} </li>
+                        <li v-for="(service, index) in $t('message.services3p')" :key="index"> {{service}} </li>
                     </ul>
                 </v-flex>
                 <v-flex xs12 sm4 md4 lg4 offset-xs1>

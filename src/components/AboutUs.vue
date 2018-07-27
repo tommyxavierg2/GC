@@ -1,12 +1,12 @@
 <template>
     <div class="text-xs-center">
-        <h1 class="mt-4">{{title}}</h1>
+        <h1 class="mt-4">{{$t("message.about")}}</h1>
         <v-container>
             <v-layout row wrap pt-4 pb-4>
                 <v-flex xs12 sm6 md6 lg6>
-                    <h3></h3>
+                    <h3>{{$t("message.waw")}}</h3>
                     <v-container>
-                        <p class="j-text"> {{whoWe.message}} </p>
+                        <p class="j-text"> {{$t("message.aboutDescription")}} </p>
                     </v-container>
                 </v-flex>
                 <v-flex xs12 sm6 md6 lg6>
@@ -33,8 +33,7 @@
 export default {
   data () {
     return {
-        title: this.$t("message.about"),
-        whoWe: { title: this.$t("message.waw"), image: require('../assets/images/pic5.jpeg'), message: this.$t("message.aboutDescription")},
+        whoWe: { image: require('../assets/images/pic5.jpeg') },
         pics: [
             { title: this.$t("message.mission"), image: require('../assets/images/pic6.jpg'), message: this.$t("message.ourMission")},
             { title: this.$t("message.vision"), image: require('../assets/images/pic7.jpg'), message: this.$t("message.ourVision")},

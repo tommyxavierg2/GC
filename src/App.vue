@@ -114,11 +114,16 @@ export default {
   watch: {
     'this.$store.state.lang'(newVal, oldVal) {
       this.$store.commit('setLanguage', newVal);
+      this.items[0].name = this.$t("message.home");
+      this.items[1].name = this.$t("message.about");
+      this.items[2].name = this.$t("message.services");
+      this.items[3].name = this.$t("message.contactUs");
     }
   },
   created() {
     let saveLanguage = localStorage.getItem('data');
     saveLanguage === 'en' ? localStorage.setItem('data', 'en') : localStorage.setItem('data', 'es');
+    console.log(this.items[0].name);
   }
 }
 </script>

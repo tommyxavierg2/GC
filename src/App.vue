@@ -8,6 +8,11 @@
               {{moreInfoLine.text}}  
           </v-btn>
         </v-toolbar-items>
+        <v-spacer></v-spacer>
+        <v-btn-toggle class="blue darken-1">
+          <v-btn flat>EN</v-btn>
+          <v-btn flat>ES</v-btn>
+        </v-btn-toggle>
       </v-toolbar>
       <v-toolbar>
         <v-toolbar-side-icon class="hidden-sm-and-up" @click.stop="drawer = !drawer"></v-toolbar-side-icon>

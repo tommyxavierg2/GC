@@ -1,4 +1,5 @@
 import firebase from 'firebase'
+import Vuefire from 'vuefire'
 
 var config = {
   apiKey: "AIzaSyCyuRKzU5C717vtoEyiraD1sz_MnoSMdag",
@@ -11,6 +12,9 @@ var config = {
 
 firebase.initializeApp(config);
 
+firebase.firestore().settings({ timestampsInSnapshots: true })
+
 export default {
-  database: firebase.database()
+  database: firebase.database(),
+  db: firebase.firestore()
 }

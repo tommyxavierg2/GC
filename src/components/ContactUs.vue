@@ -11,18 +11,22 @@
                         <v-container>
                             <v-layout row wrap>
                                 <v-flex xs12 sm4 md4 lg4>
-                                    <v-text-field background-color="grey lighten-3" label="Your name" solo></v-text-field>
+                                    <v-text-field background-color="grey lighten-3" type="text" label="Your name" solo v-model.trim="user.name" 
+                                        v-validate="'required|'" required data-vv-name="name" :error-messages="errors.collect('name')"></v-text-field>
                                 </v-flex>
                                 <v-flex xs12 sm4 md4 lg4>
-                                    <v-text-field background-color="grey lighten-3" label="Your email" solo></v-text-field>
+                                    <v-text-field background-color="grey lighten-3" type="email" v-validate="'required|email'" label="Your email" solo v-model.trim="user.email"
+                                        required data-vv-name="email" :error-messages="errors.collect('email')"></v-text-field>
                                 </v-flex>
                                 <v-flex xs12 sm4 md4 lg4>
-                                    <v-text-field background-color="grey lighten-3" label="Your phone" solo></v-text-field>
+                                    <v-text-field background-color="grey lighten-3" type="text" label="Your phone" solo v-model.trim="user.phone"
+                                        v-validate="'required|'" required data-vv-name="phone" :error-messages="errors.collect('phone')"></v-text-field>
                                 </v-flex>
                                 <v-flex xs12 sm4 md12 lg12>
-                                    <v-textarea auto-grow background-color="grey lighten-3" label="Your message" solo></v-textarea>
+                                    <v-textarea auto-grow background-color="grey lighten-3" type="text" label="Your message" solo v-model.trim="user.message"
+                                        v-validate="'required|'" required data-vv-name="message" :error-messages="errors.collect('message')"></v-textarea>
                                 </v-flex>
-                                <v-btn color="blue darken-1" style="color: white;"> <strong> Send Message </strong> </v-btn>
+                                <v-btn color="blue darken-1" style="color: white;" @click="sendEmail(user)"> <strong> Send Message </strong> </v-btn>
                             </v-layout>
                         </v-container>
                     </v-form>
@@ -47,9 +51,21 @@
     </div>
 </template> 
 <script>
+import firebase from '../services/firebase';
+import swal from 'sweetalert2';
+
     export default {
+        $_veeValidate: {
+            validator: 'new'
+        },
         data() {
             return {
+                user: {
+                    name: '',
+                    phone: '',
+                    email: '',
+                    message: ''
+                },
                 title: 'Contact Us',
                 subTitle: 'If you have any question in how we can help your business, contact us directly by filling the following form.',
                 moreInfo: 'More Info',
@@ -58,6 +74,24 @@
                     { icon: 'phone', text: '954-533-3379', href: 'tel: 954-533-3379' },
                     { icon: 'email', text: 'info@globaltradee.com', href: 'mailto:info@globaltradee.com' }
                 ]
+            }
+        },
+
+        methods: {
+            sendEmail(userData) {        
+                this.$validator.validateAll()
+                    .then(response => {
+                        if (response) {
+                            firebase.db.collection('emails').add(userData);
+                            swal({
+                                title: 'Success',
+                                text: 'Message successfuly sent',
+                                type: 'success',
+                                timer: '2000'
+                            });
+                            this.user = {};
+                        }
+                    })
             }
         }
     }

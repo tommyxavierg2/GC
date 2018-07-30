@@ -1,0 +1,71 @@
+{
+    "message": {
+        "lang": "EN",
+        "langs": [
+            {"name": "English", "code": "EN"},
+            {"name": "Spanish", "code": "ES"}
+        ],
+        "aboutDescription": "Global trade Industries (GTI) is company specialized in providing business solution, product management and business equipment, together with our import and export services globally",
+        "contacts": "Contacts",
+        "rightReserved": "All right reserved",
+        "about": "About",
+        "contactUs": "Contact Us",
+        "toolbarItems": [
+            {
+                "name": "Home", "icon": "home", "route": "/"
+            },
+            {
+                "name": "About Us", "icon": "help_outline", "route": "/aboutUs"
+            },
+            {
+                "name": "Services", "icon": "assistant", "route": "/services"
+            },
+            {
+                "name": "Contact Us", "icon": "phone", "route": "/contactUs"
+            }
+        ],
+        "readyWork": "Ready to work with us?",
+        "weAre": "We are a company specialized in providing business solution, product management and business equipment, together with our import and export services globally.",
+        "ourHistory": "Our History",
+        "readMore": "Read More",
+        "managementLevel": "Management of products and equipment at an international level",
+        "imEx": "Import and export services",
+        "3PLservices": "3PL Services",
+        "mercConsolidation": "Merchandise consolidation",
+        "globalCreated": "Global Trade Industries (GTI) is a company created in November 2015.",
+        "openedWarehouse": "We have just opened our new warehouse in Miami, FL on march 2016.",
+        "waw": "Who are we?",
+        "mission": "Mission",
+        "vision": "Vision",
+        "history": "History",
+        "ourMission": "Our mission is to offer the best services for business solution to companies when it comes to product management import & export services, by optimizing and lowering costs of our clients when managing a product in the international markets.",
+        "ourVision": "Our vision is to be the best service provider in offering management of products and services for international import & export, always offering a competitive advantage to our customers.",
+        "yourName": "Your name",
+        "yourEmail": "Your email",
+        "yourPhone": "Your phone",
+        "yourMessage": "Your message",
+        "sendMessage": "Send message",
+        "subContact": "If you have any question in how we can help your business, contact us directly by filling the following form.",
+        "moreInfo": "More Info",
+        "beNumberOne": "To be the number one intermediary agent in managing products and equipment requested by customers with manufacturers and / or distributors on an international level, offering a better option when it comes to competitive prices of the products requested.",
+        "tradeLogistic": "Trade and logistic services",
+        "ourServices": "Our Services",
+        "tradeAndServices": [
+            "Perform the coordination of logistics in the mobilization of goods in the import and export according to the needs of the customer.",
+            "Preparation of all necessary information for export documents",
+            "Export Quotes",
+            "Air shipments (Direct and consolidated)",
+            "Maritime Shipping (By container or LCL)",
+            "Door to door transportation services.",
+            "Pick-up and delivery services",
+            "Shipment tracking report",
+            "Contracting of cargo",
+            "Negotiation of shipment prices"
+        ],
+        "services3p": [
+            "Outsourced logistics services to client companies for part or all of their supply chain management functions.",
+            "Consolidation of merchandise",
+            "Fulfillment"
+        ]
+    }
+}

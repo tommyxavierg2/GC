@@ -4,36 +4,36 @@
             <v-layout row wrap> 
                 <v-flex xs12 md9 lg9>
                     <v-container>
-                        <h1>{{title}}</h1>
-                        <p>{{subTitle}}</p>
+                        <h1>{{$t("message.contactUs")}}</h1>
+                        <p>{{$t("message.subContact")}}</p>
                     </v-container>
                     <v-form>
                         <v-container>
                             <v-layout row wrap>
                                 <v-flex xs12 sm4 md4 lg4>
-                                    <v-text-field background-color="grey lighten-3" type="text" label="Your name" solo v-model.trim="user.name" 
+                                    <v-text-field background-color="grey lighten-3" type="text" :label="$t('message.yourName')" solo v-model.trim="user.name" 
                                         v-validate="'required|'" required data-vv-name="name" :error-messages="errors.collect('name')"></v-text-field>
                                 </v-flex>
                                 <v-flex xs12 sm4 md4 lg4>
-                                    <v-text-field background-color="grey lighten-3" type="email" v-validate="'required|email'" label="Your email" solo v-model.trim="user.email"
+                                    <v-text-field background-color="grey lighten-3" type="email" v-validate="'required|email'" :label="$t('message.yourEmail')" solo v-model.trim="user.email"
                                         required data-vv-name="email" :error-messages="errors.collect('email')"></v-text-field>
                                 </v-flex>
                                 <v-flex xs12 sm4 md4 lg4>
-                                    <v-text-field background-color="grey lighten-3" type="text" label="Your phone" solo v-model.trim="user.phone"
+                                    <v-text-field background-color="grey lighten-3" type="text" :label="$t('message.yourPhone')" solo v-model.trim="user.phone"
                                         v-validate="'required|'" required data-vv-name="phone" :error-messages="errors.collect('phone')"></v-text-field>
                                 </v-flex>
                                 <v-flex xs12 sm4 md12 lg12>
-                                    <v-textarea auto-grow background-color="grey lighten-3" type="text" label="Your message" solo v-model.trim="user.message"
+                                    <v-textarea auto-grow background-color="grey lighten-3" type="text" :label="$t('message.yourMessage')" solo v-model.trim="user.message"
                                         v-validate="'required|'" required data-vv-name="message" :error-messages="errors.collect('message')"></v-textarea>
                                 </v-flex>
-                                <v-btn color="blue darken-1" style="color: white;" @click="sendEmail(user)"> <strong> Send Message </strong> </v-btn>
+                                <v-btn color="blue darken-1" style="color: white;" @click="sendEmail(user)"> <strong> {{$t('message.sendMessage')}} </strong> </v-btn>
                             </v-layout>
                         </v-container>
                     </v-form>
                 </v-flex>
                 <v-flex xs12 md3 lg3>
                     <v-container>
-                        <h1>{{moreInfo}}</h1>
+                        <h1>{{$t("message.moreInfo")}}</h1>
                     </v-container>
                     <v-card flat mt-4 color="grey lighten-4">
                         <v-layout row wrap v-for="(moreInfoLine, index) in moreInfoLines" :key="index" mt-4>

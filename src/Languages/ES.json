@@ -1,0 +1,71 @@
+{
+    "message": {
+        "lang": "ES",
+        "langs": [
+            {"name": "Inglés", "code": "EN"},
+            {"name": "Español", "code": "ES"}
+        ],
+        "about": "Acerca de",
+        "aboutDescription": "Global Trade Industries (GTI) es una empresa especializada en proporcionar soluciones comerciales, gestión de productos y equipos comerciales, junto con nuestros servicios de importación y exportación a nivel mundial",
+        "contacts": "Contactos",
+        "rightReserved": "Todos los derechos reservados",
+        "contactUs": "Contactanos",
+        "toolbarItems": [
+            {
+                "name": "Inicio", "icon": "home", "route": "/"
+            },
+            {
+              "name": "about", "icon": "help_outline", "route": "/aboutUs"
+            },
+            {
+                "name": "Servicios", "icon": "assistant", "route": "/services"
+            },
+            {
+                "name": "Contactanos", "icon": "phone", "route": "/contactUs"
+            }
+        ],
+        "readyWork": "¿Listo para trabajar con nosotros?",
+        "weAre": "Somos una empresa especializada en proporcionar soluciones comerciales, gestión de productos y equipos comerciales, junto con nuestros servicios de importación y exportación a nivel mundial.",
+        "ourHistory": "Nuestra Historia",
+        "readMore": "Leer Más",
+        "managementLevel": "Gestión de productos y equipos a nivel internacional",
+        "imEx": "Servicios de importación y exportación",
+        "3PLservices": "Servicios 3PL",
+        "mercConsolidation": "Consolidación de mercancías",
+        "globalCreated": "Global Trade Industries (GTI) es una empresa creada en noviembre de 2015.",
+        "openedWarehouse": "Abrimos nuestro nuevo almacén en Miami, FL en marzo del 2016.",
+        "waw": "¿Quienes somos?",
+        "mission": "Mision",
+        "vision": "Vision",
+        "history": "Historia",
+        "ourMission": "Nuestra misión es ofrecer los mejores servicios para soluciones de negocios a empresas cuando se trata de servicios de importación y exportación de gestión de productos, mediante la optimización y reducción de los costos de nuestros clientes cuando se administra un producto en los mercados internacionales.",
+        "ourVision": "Nuestra visión es ser el mejor proveedor de servicios al ofrecer gestión de productos y servicios para importación y exportación internacional, siempre ofreciendo una ventaja competitiva a nuestros clientes.",
+        "yourName": "Su nombre",
+        "yourEmail": "Su correo",
+        "yourPhone": "Su teléfono",
+        "yourMessage": "Su mensaje",
+        "sendMessage": "Enviar mensaje",
+        "subContact": "Si tiene alguna pregunta sobre cómo podemos ayudar a su empresa, contáctenos directamente rellenando el siguiente formulario.",
+        "moreInfo": "Más Información",
+        "beNumberOne": "Ser el agente intermediario número uno en la gestión de productos y equipos solicitados por clientes con fabricantes y / o distribuidores a nivel internacional, ofreciendo una mejor opción cuando se trata de precios competitivos de los productos solicitados.",
+        "tradeLogistic": "Servicios comerciales y logísticos",
+        "ourServices": "Nuestros Servicios",
+        "tradeAndServices": [
+            "Realizar la coordinación de logística en la movilización de bienes en la importación y exportación de acuerdo a las necesidades del cliente.",
+            "Preparación de toda la información necesaria para los documentos de exportación",
+            "Cotizaciones de Exportación",
+            "Envíos aéreos (Directos y consolidados)",
+            "Envío marítimo (por contenedor o LCL)",
+            "Servicios de transporte puerta a puerta.",
+            "Servicios de recepción y entrega",
+            "Informe de seguimiento de envío",
+            "Contratación de carga",
+            "Negociación de precios de envío"
+        ],
+        "services3p": [
+            "Servicios de logística subcontratados a empresas clientes para una parte o la totalidad de sus funciones de gestión de la cadena de suministro.",
+            "Consolidación de mercancía",
+            "Cumplimiento"
+        ]
+    }
+}
